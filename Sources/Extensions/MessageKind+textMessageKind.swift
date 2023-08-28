@@ -30,7 +30,9 @@ extension MessageKind {
     case .text, .emoji, .attributedText:
       return self
     default:
-      fatalError("textMessageKind not supported for messageKind: \(self)")
+        // josh - comment fatal error and just return self so we can support customer text message types
+//      fatalError("textMessageKind not supported for messageKind: \(self)")
+        return self
     }
   }
 }
